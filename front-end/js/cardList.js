@@ -27,7 +27,7 @@ function cardGeneration(Qtd_pokemon = 10) {
 
 function insertHtmlCard(div) {
     div.className = 'card';
-    div.innerHTML += `<img class='imagem_card_list' src='img/exemplo.jpg'/>`;
+    div.innerHTML += `<img class='imagem_card_list' src='img/000.png'/>`;
     div.innerHTML += `<h2 class='name_pokemon_list'>Nome_pokemon<h2/>`;
     div.innerHTML += `<div class='labelList'>Tipo<div/>`;
     div.innerHTML += `<div class='labelList'>Categoria<div/>`;
