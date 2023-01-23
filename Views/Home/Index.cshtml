@@ -1,8 +1,53 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+
+    <div class="pokedex">
+
+        <div id="pesquisa"></div>
+
+        <div id="display"></div>
+
+        <div class="bar_button_filter">
+            <button class="button_filter">Fire</button>
+            <button class="button_filter">Water</button>
+            <button class="button_filter">Gram</button>
+            <button class="button_filter">All</button>
+        </div>
+
+        <div id="scrollbar">
+            <script src="~/js/cardList.js"></script>
+        </div>
+
+        <div id="decks">
+            <button class="button_deck">Deck1</button>
+            <button class="button_deck">Deck2</button>
+            <button class="button_deck">Deck3</button> 
+
+            <div class="tela_fundo_deck">
+                <div class="deck">
+                    <div class="fechar_deck">X</div>
+                    <div class="deck_conteudo">
+                        <div class="title_deck">
+                            <h3>Deck de batalha</h3> 
+                        </div>
+                    </div>
+                </div>
+                <script src="~/js/buttonDeck.js"></script>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
