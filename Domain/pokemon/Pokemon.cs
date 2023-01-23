@@ -25,9 +25,11 @@ public class Pokemon
     public float Speed { get => speed; set => speed = value; }
 
     //Foreign key 
+    public TipoPokemon TipoPokemon {get; set;}
     public Regiao Regiao { get; set; }
     public Usuario Usuario { get; set; }
 
+    public int TipoPokemonId;
     public int RegiaoId;
     public int UsuarioId;
 
