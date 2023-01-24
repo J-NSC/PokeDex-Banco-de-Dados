@@ -1,7 +1,15 @@
-﻿namespace Pokedex.Domain.pokemon;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Pokedex.Domain.pokemon;
 
 public class Pokemon
 {
+
+    public Pokemon()
+    {
+        this.Tipos = new HashSet<Tipo>();
+    }
+
     private int id;
     private string nomePokemon;
     private float peso;
@@ -24,14 +32,14 @@ public class Pokemon
     public float SuperDefesa { get => superDefesa; set => superDefesa = value; }
     public float Speed { get => speed; set => speed = value; }
 
-    //Foreign key 
-    public TipoPokemon TipoPokemon {get; set;}
     public Regiao Regiao { get; set; }
-    public Usuario Usuario { get; set; }
-
-    public int TipoPokemonId;
     public int RegiaoId;
+
+    public Usuario Usuario { get; set; }
     public int UsuarioId;
 
+    public virtual ICollection<Tipo> Tipos { get; set; }
+    public virtual ICollection<Habilidade> Habilidades { get; set; }
+    public virtual ICollection<Fraqueza> Fraquezas { get; set; }
 
 }
