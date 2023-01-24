@@ -14,6 +14,10 @@ public class ApplicationContextDb : DbContext
     public DbSet<Regiao> Regiaos { get; set; }
     public DbSet<Pokemon> Pokemons { get; set; }
     public DbSet<Tipo> Tipos{get; set;}
-    // public DbSet<Habilidade> Habilidades{get; set;}
+    public DbSet<Habilidade> Habilidades { get; set; }
     // public DbSet<Deck> Decks {get; set;}
+
+
 }
+
+
