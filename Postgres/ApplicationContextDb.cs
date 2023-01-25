@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pokedex.Domain.pokemon;
-using Pokedex.Domain.Deck;
+using Pokedex.Domain.Decks;
 
 namespace Pokedex.Postgres;
 
@@ -15,7 +15,7 @@ public class ApplicationContextDb : DbContext
     public DbSet<Pokemon> Pokemons { get; set; }
     public DbSet<Tipo> Tipos{get; set;}
     public DbSet<Habilidade> Habilidades { get; set; }
-    // public DbSet<Deck> Decks {get; set;}
+    public DbSet<Deck> Decks { get; set; }
 
 
 }

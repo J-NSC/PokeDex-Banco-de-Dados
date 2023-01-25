@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Pokedex.Domain.Decks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pokedex.Domain.pokemon;
 
@@ -41,5 +42,5 @@ public class Pokemon
     public virtual ICollection<Tipo> Tipos { get; set; }
     public virtual ICollection<Habilidade> Habilidades { get; set; }
     public virtual ICollection<Fraqueza> Fraquezas { get; set; }
-
+    public virtual ICollection<Deck> Decks { get; set; }
 }
