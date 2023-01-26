@@ -18,6 +18,24 @@ public class ApplicationContextDb : DbContext
     public DbSet<Deck> Decks { get; set; }
 
 
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Pokemon>()
+            .HasMany(t => t.Tipos)
+            .WithMany(p => p.Pokemons)
+            .UsingEntity(pt => pt.ToTable("PokemonTipo"));
+
+        modelBuilder.Entity<Pokemon>()
+            .HasMany(h => h.Habilidades)
+            .WithMany(p => p.Pokemons)
+            .UsingEntity(hp => hp.ToTable("HabilidadePokemon"));
+
+        modelBuilder.Entity<Pokemon>()
+            .HasMany(f => f.Fraquezas)
+            .WithMany(p => p.Pokemons)
+            .UsingEntity(fp => fp.ToTable("FraquezaPokemon"));
+    }
 }
 
 
