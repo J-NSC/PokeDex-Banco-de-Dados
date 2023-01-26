@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pokedex.Domain.pokemon;
+using Pokedex.Interface;
+using Pokedex.Interface.Implementation;
 using Pokedex.Postgres;
 
 namespace Pokedex.Controllers
@@ -13,10 +15,12 @@ namespace Pokedex.Controllers
     public class PokemonsController : Controller
     {
         private readonly ApplicationContextDb _context;
+        private readonly IPokemonManager pokemonManager;
 
-        public PokemonsController(ApplicationContextDb context)
+        public PokemonsController(ApplicationContextDb context, IPokemonManager pokemonManager)
         {
             _context = context;
+            this.pokemonManager = pokemonManager;
         }
 
         // GET: Pokemons
@@ -26,21 +30,21 @@ namespace Pokedex.Controllers
         }
 
         // GET: Pokemons/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null || _context.Pokemons == null)
-            {
-                return NotFound();
-            }
+            //if (id == null || _context.Pokemons == null)
+            //{
+            //    return NotFound();
+            //}
 
-            var pokemon = await _context.Pokemons
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (pokemon == null)
-            {
-                return NotFound();
-            }
+            //var pokemon = await _context.Pokemons
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+            //if (pokemon == null)
+            //{
+            //    return NotFound();
+            //}
 
-            return View(pokemon);
+            return Ok(await pokemonManager.GetPokemonAsync(id));
         }
 
         // GET: Pokemons/Create

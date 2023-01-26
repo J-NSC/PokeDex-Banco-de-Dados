@@ -8,4 +8,6 @@ public class Regiao
 
     public int Id { get => id; set => id = value; }
     public string RegiaoPokemon { get => regiaoPokemon; set => regiaoPokemon = value; }
+
+
 }
