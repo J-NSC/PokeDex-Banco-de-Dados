@@ -35,6 +35,7 @@ public class ApplicationContextDb : DbContext
             .HasMany(f => f.Fraquezas)
             .WithMany(p => p.Pokemons)
             .UsingEntity(fp => fp.ToTable("FraquezaPokemon"));
+
     }
 }
 

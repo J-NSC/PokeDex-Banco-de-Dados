@@ -13,66 +13,37 @@ public class PokemonSeeder
 
 	public void SeedDataContext()
 	{
-        if (!context.Tipos.Any())
-        {
-            var tipos = new List<Tipo>()
-            {
-                new Tipo()
-                {
-                    Id = 1,
-                    NomeTipo = "Grama"
-                },
-                new Tipo()
-                {
-                    NomeTipo = "Venenoso"
-                }
-            };
-            context.Tipos.AddRange(tipos);
-            context.SaveChanges();
-        }
-
-        if (!context.Regiaos.Any())
-        {
-            var regiaos = new List<Regiao>()
-            {
-                new Regiao()
-                {
-                    Id = 1,
-                    RegiaoPokemon = "Kanto"
-                }
-            };
-        }
-
-        if (!context.Usuarios.Any())
-        {
-            var usuario = new List<Usuario>()
-            {
-                new Usuario()
-                {
-                    Id = 1,
-                    Nome = "Lorenzo",
-                    Sobrenome = "Pinto"
-                }
-            };
-        }
         if (!context.Pokemons.Any())
 		{
 			var pokemons = new List<Pokemon>()
 			{
+                // 25 
 				new Pokemon()
 				{
 					Id = 1,
 					NomePokemon = "Bulbasaur",
-					Peso = 6.9f,
-					Altura = 0.7f,
+                    Descricao = "pokemon foda",
+					Peso = "6.9",
+					Altura = "0.7",
 					Hp = 15f,
-					Ataque = 3f,
-					Defesa = 4f,
-					SuperAtauqe = 5f,
-					SuperDefesa = 5f,
-					Speed = 5f,
-					UsuarioId = 1,
-					RegiaoId = 1,
+					Ataque = "3",
+					Defesa = "4",
+					SuperAtauqe = "5",
+					SuperDefesa = "5",
+					Speed = "5",
+                    Regiao = new Regiao(){
+                        Id = 1,
+                        RegiaoPokemon = "Kanto"
+                    },
+                    Usuario = new Usuario(){
+                        Id = 1,
+                        Nome = "lorenzo",
+                        Sobrenome = "Gato"
+                    },
+                    Categoria = new Categoria(){
+                        Id = 1,
+                        CategoriaPokemon = "Planta"
+                    }
 				}
 			};
 			context.Pokemons.AddRange(pokemons);
