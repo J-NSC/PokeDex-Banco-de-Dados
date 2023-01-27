@@ -26,4 +26,37 @@ public class PokemonRepository :IPokemonRepository
 		//return await context.Pokemons.FirstOrDefaultAsync(p => p.Id == id);
 		return await context.Pokemons.FindAsync(id);
 	}
+
+	//Insert
+	public async Task<Pokemon>CreatePokemonAsync(Pokemon pokemon)
+	{
+		await context.Pokemons.AddAsync(pokemon);
+		await context.SaveChangesAsync();
+
+        return pokemon;
+
+    }
+
+	//Update
+	public async Task<Pokemon> UpdatePokemonAsync(Pokemon pokemon)
+	{
+		var pokemonContext = await context.Pokemons.FindAsync(pokemon.Id);
+		if (pokemonContext == null)
+		{
+			return null;
+		}
+
+		context.Entry(pokemonContext).CurrentValues.SetValues(pokemon);
+
+		await context.SaveChangesAsync();
+		return pokemonContext;
+	}
+	//Delete
+
+	public async Task DeletePokemonAsync(int id)
+	{
+        var pokemonContext = await context.Pokemons.FindAsync(id);
+		context.Pokemons.Remove(pokemonContext);
+		await context.SaveChangesAsync();
+    }
 }

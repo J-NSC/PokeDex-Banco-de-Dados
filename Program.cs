@@ -14,8 +14,11 @@ builder.Services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationContextDb>(o
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 builder.Services.AddScoped<IPokemonManager, PokemonManager>();
 builder.Services.AddTransient<PokemonSeeder>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseSwaggerUI();
 
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
 {
@@ -40,6 +43,8 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
+
+app.UseSwagger();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

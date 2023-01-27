@@ -15,6 +15,7 @@ public class ApplicationContextDb : DbContext
     public DbSet<Pokemon> Pokemons { get; set; }
     public DbSet<Tipo> Tipos{get; set;}
     public DbSet<Habilidade> Habilidades { get; set; }
+    public DbSet<Categoria> Categoria { get; set; }
     public DbSet<Deck> Decks { get; set; }
 
 

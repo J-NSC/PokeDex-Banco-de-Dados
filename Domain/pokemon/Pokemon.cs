@@ -36,12 +36,11 @@ public class Pokemon
     public string Speed { get => speed; set => speed = value; }
 
     public Regiao Regiao { get; set; }
-    public int RegiaoId;
-
     public Usuario Usuario { get; set; }
-    public int UsuarioId;
+    public Categoria Categoria { get; set; }
 
-    public Categoria Categoria{get; set;}
+    public int RegiaoId { get; set; }
+    public int UsuarioId { get; set; }
     public int CategoriaId{get; set;}
 
     public virtual ICollection<Tipo> Tipos { get; set; }

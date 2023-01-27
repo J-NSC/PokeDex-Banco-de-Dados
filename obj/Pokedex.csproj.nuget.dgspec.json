@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pokedex\\Pokedex.csproj": {}
+    "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\Pokedex.csproj": {}
   },
   "projects": {
-    "D:\\Pokedex\\Pokedex.csproj": {
+    "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\Pokedex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pokedex\\Pokedex.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\Pokedex.csproj",
         "projectName": "Pokedex",
-        "projectPath": "D:\\Pokedex\\Pokedex.csproj",
-        "packagesPath": "C:\\Users\\jl\\.nuget\\packages\\",
-        "outputPath": "D:\\Pokedex\\obj\\",
+        "projectPath": "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\Pokedex.csproj",
+        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,6 +67,18 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -88,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
