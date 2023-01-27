@@ -10301,19 +10301,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {}
+    "C:\\Users\\jl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\Pokedex.csproj",
+      "projectUniqueName": "D:\\Pokedex\\Pokedex.csproj",
       "projectName": "Pokedex",
-      "projectPath": "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\Pokedex.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Documents\\ProjectC#\\Pokedex\\obj\\",
+      "projectPath": "D:\\Pokedex\\Pokedex.csproj",
+      "packagesPath": "C:\\Users\\jl\\.nuget\\packages\\",
+      "outputPath": "D:\\Pokedex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10387,7 +10387,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
