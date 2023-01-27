@@ -23,5 +23,18 @@ public class PokemonManager : IPokemonManager
         return await IPokemonRepository.GetPokemonsAsync();
     }
 
+    public async Task<Pokemon> UpdatePokemonAsync(Pokemon pokemon)
+    {
+        return await IPokemonRepository.UpdatePokemonAsync(pokemon); 
+    }
 
+    public async Task<Pokemon> CreatePokemonAsync(Pokemon pokemon)
+    {
+        return await IPokemonRepository.CreatePokemonAsync(pokemon);
+    }
+
+    public async Task DeletePokemonAsync(int id)
+    {
+        await IPokemonRepository.DeletePokemonAsync(id);
+    }
 }
