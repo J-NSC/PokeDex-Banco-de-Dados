@@ -1,4 +1,6 @@
-﻿using Pokedex.Domain.pokemon;
+﻿using AutoMapper;
+using CL.Core.Shared.ModelViews;
+using Pokedex.Domain.pokemon;
 using Pokedex.Repository;
 
 namespace Pokedex.Interface.Implementation;
@@ -6,10 +8,12 @@ namespace Pokedex.Interface.Implementation;
 public class PokemonManager : IPokemonManager
 {
 	private readonly IPokemonRepository IPokemonRepository;
+    private readonly IMapper mapper;
 
-    public PokemonManager(IPokemonRepository pokemonRepository)
+    public PokemonManager(IPokemonRepository pokemonRepository, IMapper mapper)
     {
         this.IPokemonRepository = pokemonRepository;
+        this.mapper = mapper;
 
     }
 
@@ -28,8 +32,9 @@ public class PokemonManager : IPokemonManager
         return await IPokemonRepository.UpdatePokemonAsync(pokemon); 
     }
 
-    public async Task<Pokemon> CreatePokemonAsync(Pokemon pokemon)
+    public async Task<Pokemon> CreatePokemonAsync(NewPokemon newPokemon)
     {
+        var pokemon = mapper.Map<Pokemon>(newPokemon);
         return await IPokemonRepository.CreatePokemonAsync(pokemon);
     }
 

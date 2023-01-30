@@ -1,4 +1,5 @@
-﻿using Pokedex.Domain.pokemon;
+﻿using Pokedex.Domain.Decks;
+using Pokedex.Domain.pokemon;
 
 namespace Pokedex.Postgres.Seeder;
 
@@ -72,6 +73,19 @@ public class PokemonSeeder
                     }
                 }
             };
+
+            //Seeder deck
+            //if (context.Decks.Any())
+            //{
+            //    var deck = new List<Deck>()
+            //    {
+            //        new Deck() {
+            //            Id = 1,
+            //            NomeDeck = "teste",
+            //            UsuarioId = 1
+            //        }
+            //    };
+            //}
 
 
 

@@ -573,3 +573,7 @@ D:\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Pokedex\obj\Debug\net6.0\Pokedex.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\CL.Core.Shared.dll
+C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\CL.Core.Shared.pdb

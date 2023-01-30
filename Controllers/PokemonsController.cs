@@ -9,6 +9,8 @@ using Pokedex.Domain.pokemon;
 using Pokedex.Interface;
 using Pokedex.Interface.Implementation;
 using Pokedex.Postgres;
+using CL.Core.Shared.ModelViews;
+
 
 namespace Pokedex.Controllers
 {
@@ -49,11 +51,11 @@ namespace Pokedex.Controllers
         // POST: Pokemons/Create
         [HttpPost]
         [Route("Create")]
-        public async Task<IActionResult> Create( Pokemon pokemon)
+        public async Task<IActionResult> Create(NewPokemon pokemon)
         {
 
             var pokemonContext = await pokemonManager.CreatePokemonAsync(pokemon);
-            return CreatedAtAction(nameof(Details), new {id = pokemon.Id}, pokemon);
+            return CreatedAtAction(nameof(Details), new {id = pokemonContext.Id}, pokemonContext);
         }
 
         // GET: Pokemons/Edit/5
@@ -77,7 +79,7 @@ namespace Pokedex.Controllers
         [Route("Edit")]
         public async Task<IActionResult> Edit(Pokemon pokemon)
         {
-            var pokemonContext = await pokemonManager.CreatePokemonAsync(pokemon);
+            var pokemonContext = await pokemonManager.UpdatePokemonAsync(pokemon);
             if (pokemonContext == null)
             {
                 return NotFound();

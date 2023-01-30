@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Pokedex.Interface;
 using Pokedex.Interface.Implementation;
+using Pokedex.Interface.Mappings;
 using Pokedex.Postgres;
 using Pokedex.Postgres.Seeder;
 using Pokedex.Repository;
@@ -14,6 +15,7 @@ builder.Services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationContextDb>(o
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 builder.Services.AddScoped<IPokemonManager, PokemonManager>();
 builder.Services.AddTransient<PokemonSeeder>();
+builder.Services.AddAutoMapper(typeof(NewPokemonMappingProfile));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -57,8 +59,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// app.MapControllerRoute(
-//     name:"default",
-//     pattern:"{controller=Pokemons}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//    name: "Deck",
+//    pattern: "{controller=Decks}/{action=Index}/{id?}");
 
 app.Run();

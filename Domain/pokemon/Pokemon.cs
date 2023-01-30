@@ -47,4 +47,6 @@ public class Pokemon
     public virtual ICollection<Habilidade> Habilidades { get; set; }
     public virtual ICollection<Fraqueza> Fraquezas { get; set; }
     public virtual ICollection<Deck> Decks { get; set; }
+
+
 }

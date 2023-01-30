@@ -1,0 +1,12 @@
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\bin\Debug\net6.0\CL.Core.Shared.deps.json
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\bin\Debug\net6.0\CL.Core.Shared.dll
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\bin\Debug\net6.0\CL.Core.Shared.pdb
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.csproj.AssemblyReference.cache
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.AssemblyInfoInputs.cache
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.AssemblyInfo.cs
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.dll
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\refint\CL.Core.Shared.dll
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\CL.Core.Shared.pdb
+C:\Users\Aluno\Documents\ProjectC#\CL.Core.Shared\obj\Debug\net6.0\ref\CL.Core.Shared.dll

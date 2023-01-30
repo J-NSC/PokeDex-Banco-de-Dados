@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CL.Core.Shared.ModelViews;
+using Microsoft.EntityFrameworkCore;
 using Pokedex.Domain.pokemon;
 using Pokedex.Interface;
 using Pokedex.Postgres;

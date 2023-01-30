@@ -1,4 +1,5 @@
-﻿using Pokedex.Domain.pokemon;
+﻿using CL.Core.Shared.ModelViews;
+using Pokedex.Domain.pokemon;
 
 namespace Pokedex.Interface;
 
