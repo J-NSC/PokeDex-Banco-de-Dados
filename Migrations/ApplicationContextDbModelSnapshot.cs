@@ -48,7 +48,7 @@ namespace Pokedex.Migrations
 
                     b.HasIndex("PokemonsId");
 
-                    b.ToTable("FraquezaPokemon");
+                    b.ToTable("FraquezaPokemon", (string)null);
                 });
 
             modelBuilder.Entity("HabilidadePokemon", b =>
@@ -63,7 +63,7 @@ namespace Pokedex.Migrations
 
                     b.HasIndex("PokemonsId");
 
-                    b.ToTable("HabilidadePokemon");
+                    b.ToTable("HabilidadePokemon", (string)null);
                 });
 
             modelBuilder.Entity("Pokedex.Domain.Decks.Deck", b =>
@@ -177,7 +177,7 @@ namespace Pokedex.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("RegiaoId1")
+                    b.Property<int>("RegiaoId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Speed")
@@ -192,16 +192,16 @@ namespace Pokedex.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UsuarioId1")
+                    b.Property<int>("UsuarioId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoriaId");
 
-                    b.HasIndex("RegiaoId1");
+                    b.HasIndex("RegiaoId");
 
-                    b.HasIndex("UsuarioId1");
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Pokemons");
                 });
@@ -273,7 +273,7 @@ namespace Pokedex.Migrations
 
                     b.HasIndex("TiposId");
 
-                    b.ToTable("PokemonTipo");
+                    b.ToTable("PokemonTipo", (string)null);
                 });
 
             modelBuilder.Entity("DeckPokemon", b =>
@@ -342,13 +342,13 @@ namespace Pokedex.Migrations
 
                     b.HasOne("Pokedex.Domain.pokemon.Regiao", "Regiao")
                         .WithMany()
-                        .HasForeignKey("RegiaoId1")
+                        .HasForeignKey("RegiaoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Pokedex.Domain.pokemon.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId1")
+                        .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
