@@ -568,3 +568,8 @@ C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCo
 C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Aluno\Documents\ProjectC#\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Aluno\Documents\ProjectC#\Pokedex\obj\Debug\net6.0\Pokedex.MvcApplicationPartsAssemblyInfo.cs
+D:\Pokedex\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Pokedex\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Pokedex\obj\Debug\net6.0\Pokedex.MvcApplicationPartsAssemblyInfo.cs
