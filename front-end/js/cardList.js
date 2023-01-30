@@ -1,34 +1,38 @@
-// Em construção, mostrar na reuniação e mandar para o repositorio
-
-if(true){cardGeneration()}
-
+const barTela = document.querySelector('.barDataDisplay');
+const buttonDisplay = document.querySelector('.button_display');
+const buttonFilter = document.querySelector('.button_filter')
 const card = document.querySelectorAll('.card');
 
-for(let iteracao = 0;  iteracao < card.length; iteracao++) {
-    card[iteracao].addEventListener('click', event => {
+card.forEach((card) => {
+    card.addEventListener('click', event => {
         const classNameOfClickedElement = event.target.classList[0];
-        const classeNames = ['label']
-        const NoCondition = classeNames.some(classeName => 
-        classeName === classNameOfClickedElement)
+        const classeNames = ['labelList']
+        const verification = classeName => classeName === classNameOfClickedElement
+        const NoCondition = classeNames.some(verification)
+        const el = event.target;
+        const id_Pk = el.id; 
 
         if(!NoCondition) {
-            alert('Teste');
+            openBar(tela(id_Pk))
         } 
     })
+})
+
+function openBar() {
+    barTela.style.display = 'flex';
 }
 
-function cardGeneration(Qtd_pokemon = 10) {
-    for(let i = 1; i <= Qtd_pokemon; i++){
-        let div = document.createElement('div');
-        insertHtmlCard(div);
-        scrollbar.appendChild(div);
-    }
+const contentsTela = document.querySelector('#display');
+const numberPk = document.querySelector('#divNumber');
+const namePk = document.querySelector('#divNamePk');
+const imgCard = document.querySelector('#card');
+
+function tela(id_Pk) {
+    contentsTela.style.background = '#5DD39E';
+    numberPk.innerHTML = `<p id=number># ${id_Pk}</p>`;
+    namePk.innerHTML = `<p id=namePk>Nome_Pokemon</p>`;
+    imgCard.innerHTML = `<img id=imgCard src='img/pk/${id_Pk}.png'/>`;
+    buttonDisplay.style.background = '#5DD39E';
+    buttonDisplay.style.display = 'flex';
 }
 
-function insertHtmlCard(div) {
-    div.className = 'card';
-    div.innerHTML += `<img class='imagem_card_list' src='img/000.png'/>`;
-    div.innerHTML += `<h2 class='name_pokemon_list'>Nome_pokemon<h2/>`;
-    div.innerHTML += `<div class='labelList'>Tipo<div/>`;
-    div.innerHTML += `<div class='labelList'>Categoria<div/>`;
-}
