@@ -24,28 +24,31 @@ namespace Pokedex.Controllers
         }
 
         // GET: Pokemons
+        [HttpGet]
+        [Route("Get")]
         public async Task<IActionResult> Index()
         {
-            //return View(await _context.Pokemons.ToListAsync());
             return Ok(await pokemonManager.GetPokemonsAsync());
         }
 
         // GET: Pokemons/Details/5
+        [HttpGet]
+        [Route("GetByID")]
         public async Task<IActionResult> Details(int id)
         {
 
             return Ok(await pokemonManager.GetPokemonAsync(id));
         }
 
-        //// GET: Pokemons/Create
-        //public IActionResult Create()
-        //{
-        //    return View();
-        //}
+        // GET: Pokemons/Create
+        public IActionResult Create()
+        {
+           return View();
+        }
 
         // POST: Pokemons/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [Route("Create")]
         public async Task<IActionResult> Create( Pokemon pokemon)
         {
 
@@ -70,8 +73,8 @@ namespace Pokedex.Controllers
         //}
 
         // POST: Pokemons/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPut]
+        [Route("Edit")]
         public async Task<IActionResult> Edit(Pokemon pokemon)
         {
             var pokemonContext = await pokemonManager.CreatePokemonAsync(pokemon);
@@ -84,26 +87,26 @@ namespace Pokedex.Controllers
         }
 
         // GET: Pokemons/Delete/5
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    if (id == null || _context.Pokemons == null)
-        //    {
-        //        return NotFound();
-        //    }
+        public async Task<IActionResult> Delete(int? id)
+        {
+           if (id == null || _context.Pokemons == null)
+           {
+               return NotFound();
+           }
 
-        //    var pokemon = await _context.Pokemons
-        //        .FirstOrDefaultAsync(m => m.Id == id);
-        //    if (pokemon == null)
-        //    {
-        //        return NotFound();
-        //    }
+           var pokemon = await _context.Pokemons
+               .FirstOrDefaultAsync(m => m.Id == id);
+           if (pokemon == null)
+           {
+               return NotFound();
+           }
 
-        //    return View(pokemon);
-        //}
+           return View(pokemon);
+        }
 
         // POST: Pokemons/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [HttpDelete]
+        [Route("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
            await pokemonManager.DeletePokemonAsync(id);
