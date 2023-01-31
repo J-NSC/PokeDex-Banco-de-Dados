@@ -42,10 +42,10 @@ namespace Pokedex.Controllers
             return Ok(await pokemonManager.GetPokemonAsync(id));
         }
 
-        // GET: Pokemons/Create
+        //GET: Pokemons/Create
         public IActionResult Create()
         {
-           return View();
+            return View();
         }
 
         // POST: Pokemons/Create
@@ -58,23 +58,9 @@ namespace Pokedex.Controllers
             return CreatedAtAction(nameof(Details), new {id = pokemonContext.Id}, pokemonContext);
         }
 
-        // GET: Pokemons/Edit/5
-        //public async Task<IActionResult> Edit(int? id)
-        //{
-        //    if (id == null || _context.Pokemons == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var pokemon = await _context.Pokemons.FindAsync(id);
-        //    if (pokemon == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(pokemon);
-        //}
-
         // POST: Pokemons/Edit/5
+
+
         [HttpPut]
         [Route("Edit")]
         public async Task<IActionResult> Edit(Pokemon pokemon)

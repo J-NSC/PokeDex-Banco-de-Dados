@@ -10,6 +10,7 @@
         public string Nome { get => nome; set => nome = value; }
         public string Sobrenome { get => sobrenome; set => sobrenome = value; }
 
+        public Pokemon Pokemon { get; set; }
 
     }
 }

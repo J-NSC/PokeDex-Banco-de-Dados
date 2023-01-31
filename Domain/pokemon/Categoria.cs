@@ -7,4 +7,6 @@ public class Categoria
 
     public int Id { get => id; set => id = value; }
     public string CategoriaPokemon { get => categoriaPokemon; set => categoriaPokemon = value; }
+
+    public Pokemon Pokemon { get; set; }
 }

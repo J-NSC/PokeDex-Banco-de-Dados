@@ -11,6 +11,7 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "CL.Core.Shared": "1.0.0",
+          "FluentValidation.WebApi": "8.6.1",
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.Design": "7.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
@@ -48,6 +49,41 @@
           }
         }
       },
+      "FluentValidation/8.6.1": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.6.1.0"
+          }
+        }
+      },
+      "FluentValidation.ValidatorAttribute/8.6.1": {
+        "dependencies": {
+          "FluentValidation": "8.6.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.6.1.0"
+          }
+        }
+      },
+      "FluentValidation.WebApi/8.6.1": {
+        "dependencies": {
+          "FluentValidation": "8.6.1",
+          "FluentValidation.ValidatorAttribute": "8.6.1",
+          "Microsoft.AspNet.WebApi.Core": "5.2.4"
+        },
+        "runtime": {
+          "lib/net45/FluentValidation.WebApi.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.6.1.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -82,6 +118,29 @@
         }
       },
       "MessagePackAnalyzer/2.1.152": {},
+      "Microsoft.AspNet.WebApi.Client/5.2.4": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "5.2.4.0",
+            "fileVersion": "5.2.60201.0"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.4": {
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.4"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Http.dll": {
+            "assemblyVersion": "5.2.4.0",
+            "fileVersion": "5.2.60201.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Razor.Language/6.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {
@@ -1399,6 +1458,18 @@
           }
         }
       },
+      "Newtonsoft.Json.Bson/1.0.1": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.1.20722"
+          }
+        }
+      },
       "Npgsql/7.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
@@ -1652,6 +1723,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
+      "System.ComponentModel.Annotations/4.4.1": {},
       "System.Composition/1.0.31": {
         "dependencies": {
           "System.Composition.AttributedModel": "1.0.31",
@@ -2461,6 +2533,27 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
     },
+    "FluentValidation/8.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g0xw/YCVgJ1IYpBgKF9iuci/Arf6Dsq9H/WeeT9zaBpjrEA+Cr2GjWXHu1F0DKqVzp4J4hta4gGrRt6H4aESqQ==",
+      "path": "fluentvalidation/8.6.1",
+      "hashPath": "fluentvalidation.8.6.1.nupkg.sha512"
+    },
+    "FluentValidation.ValidatorAttribute/8.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OJOMPvZIeSD/X6TBNFSRhn5j/kvsBIuyn9k7coSgUoaillH4QXJn+LyPp8T9aSbZt3r+VIvzhkg782QeaHNnAQ==",
+      "path": "fluentvalidation.validatorattribute/8.6.1",
+      "hashPath": "fluentvalidation.validatorattribute.8.6.1.nupkg.sha512"
+    },
+    "FluentValidation.WebApi/8.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O1aitkXUl6wOFNT4I1dPo7xEtgSCfnje/Jmcws0WXrvJ8ElvpGrobKkEBOZzqLYD7S3QWxZ8f+SdyrlWMOZlXA==",
+      "path": "fluentvalidation.webapi/8.6.1",
+      "hashPath": "fluentvalidation.webapi.8.6.1.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -2488,6 +2581,20 @@
       "sha512": "sha512-uJhZlGMkXDaFYsH8V9S6o1EyvsUqB9mpU4DVBXNr0DXZVzZMhuLP1IkLj5xK3EKlaAcvkFkZv3eSvuz360wb3Q==",
       "path": "messagepackanalyzer/2.1.152",
       "hashPath": "messagepackanalyzer.2.1.152.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OdBVC2bQWkf9qDd7Mt07ev4SwIdu6VmLBMTWC0D5cOP/HWSXyv/77otwtXVrAo42duNjvXOjzjP5oOI9m1+DTQ==",
+      "path": "microsoft.aspnet.webapi.client/5.2.4",
+      "hashPath": "microsoft.aspnet.webapi.client.5.2.4.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Core/5.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rbLh178vmOWxhFQgiVkKmZyG53XEdyBZJbCsV36a4VxokIBzSRYUaMkXWEwJTy83PoHhPiDHNQFN3A3BQzwhtg==",
+      "path": "microsoft.aspnet.webapi.core/5.2.4",
+      "hashPath": "microsoft.aspnet.webapi.core.5.2.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.0": {
       "type": "package",
@@ -2944,6 +3051,13 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
+    "Newtonsoft.Json.Bson/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
+      "path": "newtonsoft.json.bson/1.0.1",
+      "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
+    },
     "Npgsql/7.0.1": {
       "type": "package",
       "serviceable": true,
@@ -3195,6 +3309,13 @@
       "sha512": "sha512-l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "path": "system.collections.immutable/6.0.0",
       "hashPath": "system.collections.immutable.6.0.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

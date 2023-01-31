@@ -9,5 +9,10 @@ public class NewPokemonMappingProfile : Profile
 	public NewPokemonMappingProfile()
 	{
 		CreateMap<NewPokemon, Pokemon>();
-	}
+		CreateMap<NewUsuario, Usuario>();
+		CreateMap<NewRegion, Regiao>();
+		CreateMap<NewCategoria, Categoria>();
+		CreateMap<Tipo, ReferenciaTipo>().ReverseMap();
+        CreateMap<Tipo, NewTipo>().ReverseMap();
+    }
 }

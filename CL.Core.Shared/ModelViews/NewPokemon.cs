@@ -33,4 +33,6 @@ public class NewPokemon
     public int RegiaoId { get; set; }
     public int UsuarioId { get; set; }
     public int CategoriaId { get; set; }
+
+    public ICollection<ReferenciaTipo>Tipos { get; set; }
 }

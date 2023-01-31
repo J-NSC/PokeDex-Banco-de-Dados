@@ -18,7 +18,6 @@ public class PokemonSeeder
         {
             var pokemons = new List<Pokemon>()
             {
-                // 25 
 				new Pokemon()
                 {
                     Id = 1,
@@ -70,25 +69,26 @@ public class PokemonSeeder
                     {
                         Id = 2,
                         CategoriaPokemon = "Venenoso"
-                    }
+                    },
                 }
             };
 
-            //Seeder deck
-            //if (context.Decks.Any())
-            //{
-            //    var deck = new List<Deck>()
-            //    {
-            //        new Deck() {
-            //            Id = 1,
-            //            NomeDeck = "teste",
-            //            UsuarioId = 1
-            //        }
-            //    };
-            //}
-
-
-
+            if (!context.Tipos.Any())
+            {
+                var tipos = new List<Tipo>()
+                {
+                    new Tipo()
+                    {
+                        Id = 1,
+                        NomeTipo = "Grama"
+                    },
+                    new Tipo()
+                    {
+                        Id = 2 ,
+                        NomeTipo = "Venenoso"
+                    }
+                };
+            }
 
             context.Pokemons.AddRange(pokemons);
             context.SaveChanges();

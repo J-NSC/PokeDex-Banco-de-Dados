@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CL.Core.Shared.ModelViews
+{
+    public class NewRegion
+    {
+        private string regiaoPokemon;
+
+        public string RegiaoPokemon { get => regiaoPokemon; set => regiaoPokemon = value; }
+    }
+}

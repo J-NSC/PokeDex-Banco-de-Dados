@@ -4,9 +4,13 @@ using Pokedex.Domain.pokemon;
 
 namespace Pokedex.Configuration;
 
-public class Relationship : IEntityTypeConfiguration<Pokemon>
+public class CategoriaConfiguration : IEntityTypeConfiguration<Pokemon>
 {
     public void Configure(EntityTypeBuilder<Pokemon> builder)
     {
+        builder
+            .HasOne(c => c.Categoria)
+            .WithOne(p => p.Pokemon)
+            .HasForeignKey<Pokemon>(p=>p.CategoriaId);
     }
 }

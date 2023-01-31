@@ -1,15 +1,11 @@
-﻿using Pokedex.Domain.Decks;
+﻿using Newtonsoft.Json;
+using Pokedex.Domain.Decks;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pokedex.Domain.pokemon;
 
 public class Pokemon
 {
-
-    //public Pokemon()
-    //{
-    //    this.Tipos = new HashSet<Tipo>();
-    //}
 
     private int id;
     private string nomePokemon;
