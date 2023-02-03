@@ -333,7 +333,7 @@
     position: absolute;
     display: none;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 20px;
     grid-row-gap: 1em;
     justify-items: center;
     align-items: center;
@@ -381,11 +381,10 @@
 
 /*------------------Remover Pokemon---------------------*/
 
-.bkg_removePokemon{
-    position: absolute;
-    display:none;
-    width: 100px;
-    height: 70px;
-    border-radius: 10px;
+.bkg_removePokemon1, .bkg_removePokemon2, .bkg_removePokemon {
+    display:grid;
+    width: 70px;
+    height: 20px;
     background: #D9D9D9;
 }
+

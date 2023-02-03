@@ -21,42 +21,19 @@ btnAdd.forEach((btnAdd) => {
 
         if(closeCondition){
             if(id === "add1") {
-                addInsideDeck1(num.pop(0));
+                addInsideDeck1(num.pop());
             }
     
             if(id === "add2") {
-                addInsideDeck2(num.pop(0));
+                addInsideDeck2(num.pop());
             }
     
             if(id === "add3") {
-                addInsideDeck3(num.pop(0));
+                addInsideDeck3(num.pop());
             }   
         }        
     })
 });
-
-//criação do remover e trocar ataque
-const removeImgDeck = document.querySelector('.remover');
-const trocaAtaque = document.querySelector('.trocarAtaque');
-
-removeImgDeck.addEventListener('click', () => {
-
-})
-
-trocaAtaque.addEventListener('click', () => {
-    
-})
-
-function remover() {
-    btnRemoveTrocarDeck.style.display = 'none'
-    alert('Remove Pokemon')
-}
-
-function trocarAtaque() {
-    btnRemoveTrocarDeck.style.display = 'none'
-    alert('Trocar Ataque')
-}
-
 
 let num = [];
 
@@ -71,52 +48,57 @@ card.forEach((card) => {
 
 function addInsideDeck1(id) {
     btn.style.display = 'none';
-    
+    let imagem = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+
     if(addDeck1[0].innerHTML === '') {
-        addDeck1[0].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck1[0].innerHTML = imagem;
     } else if(addDeck1[1].innerHTML === '') {
-        addDeck1[1].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck1[1].innerHTML = imagem;
     } else if(addDeck1[2].innerHTML === '') {
-        addDeck1[2].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck1[3].innerHTML === '') {
-        addDeck1[3].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck1[4].innerHTML === '') {
-        addDeck1[4].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck1[5].innerHTML === '') {
-        addDeck1[5].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck1[2].innerHTML = imagem;
+    } else if(addDeck1[3].innerHTML === '') {
+        addDeck1[3].innerHTML = imagem;
+    } else if(addDeck1[4].innerHTML === '') {
+        addDeck1[4].innerHTML = imagem;
+    } else if(addDeck1[5].innerHTML === '') {
+        addDeck1[5].innerHTML = imagem;
     }
 }
 
 function addInsideDeck2(id) {
     btn.style.display = 'none';
+    let imagem2 = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+
     if(addDeck2[0].innerHTML === '') {
-        addDeck2[0].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if(addDeck2[1].innerHTML != addDeck2[0].innerHTML) {
-        addDeck2[1].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck2[0].innerHTML = imagem2;
+    } else if(addDeck2[1].innerHTML === '') {
+        addDeck2[1].innerHTML = imagem2;
     } else if(addDeck2[2].innerHTML === '') {
-        addDeck2[2].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck2[3].innerHTML === '') {
-        addDeck2[3].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck1[4].innerHTML === '') {
-        addDeck2[4].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck2[5].innerHTML === '') {
-        addDeck2[5].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck2[2].innerHTML = imagem2;
+    } else if(addDeck2[3].innerHTML === '') {
+        addDeck2[3].innerHTML = imagem2;
+    } else if(addDeck2[4].innerHTML === '') {
+        addDeck2[4].innerHTML = imagem2;
+    } else if(addDeck2[5].innerHTML === '') {
+        addDeck2[5].innerHTML = imagem2;
     }
 }
 
 function addInsideDeck3(id) {
     btn.style.display = 'none';
+    let imagem3 = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+
     if(addDeck3[0].innerHTML === '') {
-        addDeck3[0].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck3[0].innerHTML = imagem3;
     } else if(addDeck3[1].innerHTML === '') {
-        addDeck3[1].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck3[1].innerHTML = imagem3;
     } else if(addDeck3[2].innerHTML === '') {
-        addDeck3[2].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck3[3].innerHTML === '') {
-        addDeck3[3].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck3[4].innerHTML === '') {
-        addDeck3[4].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
-    } else if (addDeck3[5].innerHTML === '') {
-        addDeck3[5].innerHTML = `<img class='img_deck' id=${id} src='img/pk/${id}.png'/>`;
+        addDeck3[2].innerHTML = imagem3;
+    } else if(addDeck3[3].innerHTML === '') {
+        addDeck3[3].innerHTML = imagem3;
+    } else if(addDeck3[4].innerHTML === '') {
+        addDeck3[4].innerHTML = imagem3;
+    } else if(addDeck3[5].innerHTML === '') {
+        addDeck3[5].innerHTML = imagem3;
     }
 }
