@@ -194,13 +194,13 @@
 #scrollbar {
     position: absolute;
     width: 350px;
-    height: 393px;
+    height: 400px;
     background: #D9D9D9;
     border-radius: 5px;
     overflow-y: scroll;
     padding: 1px 2%;
     margin-left: 399px;
-    margin-top: 20px;
+    margin-top: 90px;
     margin-right: 26px;
 }
 
@@ -214,7 +214,7 @@
     background: #FFFFFF;
 }
 
-.labelList {
+.labelListType, .labelListCategoria {
     position: relative;
     display: flex;
     top:35%;
@@ -232,8 +232,8 @@
 
 .imagem_card_list {
     position: absolute;
-    width: 125px;
-    height: 108px;
+    width: 150px;
+    height: 130px;
 }
 
 .name_pokemon_list {
@@ -262,7 +262,7 @@
     background: #D9D9D9;
     border-radius: 15px;
     margin-left: 25px;
-    margin-top: 360px;
+    margin-top: 440px;
 } 
 
 .button_deck {
@@ -351,12 +351,13 @@
     width: 68.84px;
     height: 66px;
     border-radius:90px;
-    background: #cad2c5;
+    background: #FFF;
 }
 
-#img_deck {
-    width: 34.83px;
-    height: 31.84px;
+.img_deck {
+    position: absolute;
+    width: 50.83px;
+    height: 50.84px;
 }
 
 .title_deck {
@@ -378,6 +379,13 @@
     font-family: Arial;
 }
 
-/*---------------------------------------*/
+/*------------------Remover Pokemon---------------------*/
 
-
+.bkg_removePokemon{
+    position: absolute;
+    display:none;
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    background: #D9D9D9;
+}

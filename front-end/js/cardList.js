@@ -3,10 +3,11 @@ const buttonDisplay = document.querySelector('.button_display');
 const buttonFilter = document.querySelector('.button_filter')
 const card = document.querySelectorAll('.card');
 
+
 card.forEach((card) => {
     card.addEventListener('click', event => {
         const classNameOfClickedElement = event.target.classList[0];
-        const classeNames = ['labelList']
+        const classeNames = ['labelListType', 'labelListCategoria']
         const verification = classeName => classeName === classNameOfClickedElement
         const NoCondition = classeNames.some(verification)
         const el = event.target;

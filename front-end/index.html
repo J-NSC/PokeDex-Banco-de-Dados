@@ -36,28 +36,7 @@
             <input type="search"/>
         </div>
 
-        <div class="bar_button_filter">
-            <button class="button_filter" id="Fire">Fire</button>
-            <button class="button_filter" id="Water">Water</button>
-            <button class="button_filter" id="Grass">Grass</button>
-            <select name="allTypes" class="button_filter">
-                <option id="all">All</option>
-                <option id="normal">Normal</option>
-                <option id="flying">Flying</option>
-                <option id="fighting">Fighting</option>
-                <option id="poison">Poison</option>
-                <option id="electric">Electric</option>
-                <option id="ground">Ground</option>
-                <option id="psychic">Psychic</option>
-                <option id="ice">Ice</option>
-                <option id="bug">Bug</option>
-                <option id="ghost">Ghost</option>
-                <option id="steel">Steel</option>
-                <option id="dragon">Dragon</option>
-                <option>Dark</option>
-                <option>Fairy </option>
-            </select>
-        </div>
+        <!-- <div class="bar_button_filter"></div> -->
 
         <div id="scrollbar">
             <script src="js/search.js"></script>
@@ -75,15 +54,20 @@
                     <div class="deck_conteudo">
                         <div class="title_deck">
                             <h3>Deck de batalha</h3>
-                            <div id="contents_pk_deck1">
+                            <div id="contents_pk_deck1" class="fechar">
                                 <div class="pk_deck1" id="cp1slot1"></div>
                                 <div class="pk_deck1" id="cp1slot2"></div>
                                 <div class="pk_deck1" id="cp1slot3"></div>
                                 <div class="pk_deck1" id="cp1slot4"></div>
                                 <div class="pk_deck1" id="cp1slot5"></div>
                                 <div class="pk_deck1" id="cp1slot6"></div>
+
+                                <span class="bkg_removePokemon">
+                                    <button class="remover">Remover</button>
+                                    <button class="trocarAtaque">Trocar Ataque</button>
+                                </span>
                             </div>
-                            <div id="contents_pk_deck2">
+                            <div id="contents_pk_deck2" class="fechar">
                                 <div class="pk_deck2" id="cp2slot1"></div>
                                 <div class="pk_deck2" id="cp2slot2"></div>
                                 <div class="pk_deck2" id="cp2slot3"></div>
@@ -91,7 +75,7 @@
                                 <div class="pk_deck2" id="cp2slot5"></div>
                                 <div class="pk_deck2" id="cp2slot6"></div>
                             </div>
-                            <div id="contents_pk_deck3">
+                            <div id="contents_pk_deck3" class="fechar">
                                 <div class="pk_deck3" id="cp3slot1"></div>
                                 <div class="pk_deck3" id="cp3slot2"></div>
                                 <div class="pk_deck3" id="cp3slot3"></div>
